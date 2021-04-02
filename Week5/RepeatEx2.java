@@ -2,19 +2,19 @@ import java.util.Scanner;
 
 class RepeatEx2{
 	public static void main(String[] args){
-		//¹®ÀÚÇÏ³ª ÀÔ·Â¹Ş¾Æ ±×´ë·ÎÃâ·ÂÇÏ°í q³ª Q°¡ ÀÔ·ÂµÇ¸é ÇÁ·Î±×·¥Á¾·á
+		//ë¬¸ìí•˜ë‚˜ ì…ë ¥ë°›ì•„ ê·¸ëŒ€ë¡œì¶œë ¥í•˜ê³  që‚˜ Qê°€ ì…ë ¥ë˜ë©´ í”„ë¡œê·¸ë¨ì¢…ë£Œ
 		
 		char input;
 		Scanner sc = new Scanner(System.in);
 		
 		while(true){
-			System.out.print("¹®ÀÚ : ");
+			System.out.print("ë¬¸ì : ");
 			input = sc.next().charAt(0);
 			if(input == 'q' || input == 'Q')
 				break;
-			System.out.println("ÀÔ·ÂÇÏ½Å ¹®ÀÚ´Â : " + input + "ÀÔ´Ï´Ù.");
+			System.out.println("ì…ë ¥í•˜ì‹  ë¬¸ìëŠ” : " + input + "ì…ë‹ˆë‹¤.");
 		}
-		System.out.print("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù. ");
+		System.out.print("í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤. ");
 		System.exit(0);
 	}
 }
