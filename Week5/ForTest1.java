@@ -8,7 +8,7 @@ class ForTest1{
 		int lenginput;
 		char resu;
 		Scanner sc = new Scanner(System.in);
-		System.out.print("¹®ÀÚ¿­ : ");
+		System.out.print("ë¬¸ìì—´ : ");
 		input = sc.nextLine();
 		leng = (int)input.length();
 		
@@ -20,10 +20,10 @@ class ForTest1{
 				break;	
 			}
 			
-			System.out.println("[ÀÔ·Â¿À·ù] x´Â ¹®ÀÚ¿­ÀÇ ±æÀÌ ÀÌÇÏÀÇ ¾çÀÇ Á¤¼ö¸¸ À¯È¿ÇÕ´Ï´Ù.");
+			System.out.println("[ì…ë ¥ì˜¤ë¥˜] xëŠ” ë¬¸ìì—´ì˜ ê¸¸ì´ ì´í•˜ì˜ ì–‘ì˜ ì •ìˆ˜ë§Œ ìœ íš¨í•©ë‹ˆë‹¤.");
 		}
 		resu = input.charAt(lenginput-1);
-		System.out.println("ÀÔ·ÂÇÏ½Å ¹®ÀÚ¿­ " + input + "¿¡¼­ " + lenginput + "¹ø Â° ¹®ÀÚ´Â '" + resu +"' ÀÔ´Ï´Ù ");
+		System.out.println("ì…ë ¥í•˜ì‹  ë¬¸ìì—´ " + input + "ì—ì„œ " + lenginput + "ë²ˆ ì§¸ ë¬¸ìëŠ” '" + resu +"' ì…ë‹ˆë‹¤ ");
 		
 		
 	}
