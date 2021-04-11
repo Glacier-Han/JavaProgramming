@@ -4,27 +4,82 @@ class H5p1q3{
 	public static void main(String[] args){
 		String type;
 		int line;
+		int width, height, rep;
 		Scanner sc = new Scanner(System.in);
 		while(true){
-			System.out.print("ë¼ì¸ ìˆ˜: ");
+			System.out.print("µµÇüÀÇ Å¸ÀÔ: ");
 			type = sc.nextLine();
-			if(type.equals("í”¼ë¼ë¯¸ë“œ")||type.equals("ì‚¬ê°í˜•")||type.equals("ë‹¤ì´ì•„ëª¬ë“œ")) break;
-			System.out.println("[ìž…ë ¥ì˜¤ë¥˜]");
+			if(type.equals("ÇÇ¶ó¹Ìµå")||type.equals("»ç°¢Çü")||type.equals("´ÙÀÌ¾Æ¸óµå")) break;
+			System.out.println("[ÀÔ·Â¿À·ù]");
 		}
 		
-		if(type.equals("í”¼ë¼ë¯¸ë“œ")){
+		if(type.equals("ÇÇ¶ó¹Ìµå")){
+			while(true){
+			System.out.print("¶óÀÎ ¼ö: ");
+			line = sc.nextInt();
+			if(line>0 && line<=10) break;
+			System.out.println("[ÀÔ·Â¿À·ù]");
+			}
+			for(int i=1; i<=line; i++){
+				for(int j=line; j>i; j--) System.out.print(" ");
+				for(int s=i; s<=2*i-1; s++) System.out.print(s);
+				System.out.print("\n");
+			}
 			
 		}
 		
-		else if(type.equals("ì‚¬ê°í˜•")){
+		else if(type.equals("´ÙÀÌ¾Æ¸óµå")){
+			while(true){
+			System.out.print("¶óÀÎ ¼ö: ");
+			line = sc.nextInt();
+			if(line>0 && line%2==1) break;
+			System.out.println("[ÀÔ·Â¿À·ù]");
+			}
 			
+			for(int i=1; i<=line/2+1; i++){
+				for(int j=line/2; j>i-1; j--) System.out.print(" ");
+				for(int s=1; s<=2*i-1; s++) System.out.print("*");
+				System.out.print("\n");
+			}
+			
+			for(int i=line/2; i>=1; i--){
+				for(int j=i; j<=line/2; j++) System.out.print(" ");
+				for(int s=2*i-1; s>=1; s--) System.out.print("*");
+				System.out.print("\n");
+			}
 		}
 		
 		else {
+			while(true){
+				System.out.print("°¡·Î: ");
+				width = sc.nextInt();
+				if(width>0) break;
+				System.out.println("[ÀÔ·Â¿À·ù]");
+			}
+			while(true){
+				System.out.print("¼¼·Î: ");
+				height = sc.nextInt();
+				if(height>0) break;
+				System.out.println("[ÀÔ·Â¿À·ù]");
+			}
+			while(true){
+				System.out.print("¹Ýº¹ È½¼ö: ");
+				rep = sc.nextInt();
+				if(rep>0) break;
+				System.out.println("[ÀÔ·Â¿À·ù]");
+			}
 			
-		}
+			
+			for(int i=0; i<height; i++){
+				for(int r=0; r<rep; r++){
+					for(int w=0; w<width; w++) System.out.print("*");
+					System.out.print(" ");
+				}
+				System.out.print("\n");
+			}
 		
 		
+	}
 	}
 }
 
