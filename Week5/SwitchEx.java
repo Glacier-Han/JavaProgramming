@@ -36,7 +36,7 @@ class SwitchEx{
 		month = sc.nextInt();
 		
 		switch(month){
-			case 1:case 3:case5: case7: case9: case11: 
+			case 1:case 3:case 5: case 7: case 9: case 11: 
 				System.out.println(year + "년 "+month + "월은 31일까지 있습니다.");
 				break;
 			
