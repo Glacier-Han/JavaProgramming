@@ -2,18 +2,18 @@ import java.util.*;
 
 class Week9_2{
 	
-	//µÎ Á¤¼ö ÇÕ ¸Ş¼Òµå
+	//ë‘ ì •ìˆ˜ í•© ë©”ì†Œë“œ
 	static int sumTwo(int a, int b){
 		return a+b;
 	}
 	
-	//¼¼ ½Ç¼ö ÇÕ ¸Ş¼Òµå
+	//ì„¸ ì‹¤ìˆ˜ í•© ë©”ì†Œë“œ
 	static void sumThree(double a, double b, double c){
 		System.out.println(a+b+c);
 		return;
 	}		
 	
-	//Á¤¼öÇü ÀÌÂ÷¿ø ¹è¿­ ¼ººĞ Ãâ·Â ¸Ş¼Òµå
+	//ì •ìˆ˜í˜• ì´ì°¨ì› ë°°ì—´ ì„±ë¶„ ì¶œë ¥ ë©”ì†Œë“œ
 	static void printArr(int [][] arr){
 		for(int[] x:arr){
 			for(int y : x){
@@ -25,8 +25,8 @@ class Week9_2{
 	public static void main(String [] args){
 		Scanner sc = new Scanner(System.in);
 		//5+3
-		//ÇÔ¼ö»ç¿ëÇÏ·Á¸é È£ÃâÇØ¾ßÇÔ
-		//ÇÔ¼öÈ£Ãâ¹ı -> ÇÔ¼ö ÀÌ¸§(ÇÔ¼ö°¡ ¿øÇÏ´Â ÀÎÀÚ)
+		//í•¨ìˆ˜ì‚¬ìš©í•˜ë ¤ë©´ í˜¸ì¶œí•´ì•¼í•¨
+		//í•¨ìˆ˜í˜¸ì¶œë²• -> í•¨ìˆ˜ ì´ë¦„(í•¨ìˆ˜ê°€ ì›í•˜ëŠ” ì¸ì)
 		
 		System.out.print(sumTwo(5,3));
 		System.out.println();
