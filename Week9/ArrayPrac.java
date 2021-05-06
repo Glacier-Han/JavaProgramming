@@ -74,7 +74,7 @@ class ArrayPrac{
 	}
 	
 	public static void main(String [] args){
-		System.out.print("¹è¿­ÀÇ ¿ø¼Ò °¹¼ö: ");
+		System.out.print("ë°°ì—´ì˜ ì›ì†Œ ê°¯ìˆ˜: ");
 		Scanner sc = new Scanner(System.in);
 		
 		int su;
@@ -96,11 +96,11 @@ class ArrayPrac{
 		System.out.print(indexMaxArr(arr));
 		System.out.println();
 		
-		System.out.print("¼ÅÇÃ ÈÄ: ");
+		System.out.print("ì…”í”Œ í›„: ");
 		shuffleArr(arr);
 		System.out.println();
 		
-		System.out.print("¿À¸¥ÂÊ 1Ä­ ·ÎÅ× ÈÄ: ");
+		System.out.print("ì˜¤ë¥¸ìª½ 1ì¹¸ ë¡œí…Œ í›„: ");
 		rotate1Arr(arr);
 		System.out.println();
 		
