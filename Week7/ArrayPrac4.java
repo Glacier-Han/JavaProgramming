@@ -7,13 +7,23 @@ class ArrayPrac4{
 	public static void main(String[] args){
 		int [] arr;
 		int tem;
-		arr = new int[15];
+		arr = new int[100];
 		Random ran = new Random();
 		
-		for(int i=0; i<15; i++){
-			arr[i] = ran.nextInt(15);
+		for(int i=0; i<6; i++){
+			arr[i] = ran.nextInt(45)+1;
+			
+			for(int j=0; j<i; j++){
+				if(arr[i]==arr[j]){
+					arr[i] = ran.nextInt(45)+1;
+				}
+			}
+			
 		}
-		for(int i=0; i<15; i++){
+		
+		
+		
+		for(int i=0; i<6; i++){
 			for(int j=0; j<i; j++){
 				if(arr[i]<arr[j]){
 					tem = arr[i];
@@ -23,8 +33,8 @@ class ArrayPrac4{
 			}
 			
 		}
-		for(int i=0; i<15; i++){
-			System.out.printf(" %d ",arr[i]);
+		for(int i=0; i<6; i++){
+			System.out.printf(" %02d ",arr[i]);
 		}
 		
 		
