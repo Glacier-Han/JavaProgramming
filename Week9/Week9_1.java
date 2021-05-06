@@ -14,7 +14,7 @@ class Week9_1{
 			}
 		}
 		
-		//for-eachทฮ arr2 ผบบะ ธ๐ตฮ รโทย
+		//for-eachยทร arr2 ยผยบยบร ยธรฐยตร รรขยทร
 		
 		for(int[] x:arr2){
 			for(int y : x){
