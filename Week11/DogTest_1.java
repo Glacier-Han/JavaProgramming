@@ -113,12 +113,17 @@ class Dog{
 		this.name = name;
 		this.age = age;
 	}
-	
 	/*
 	Dog(String name, int fullrate){
 	}
 	이건 불가, 왜냐하면 시그니쳐 똑같아서 구분 불가능, 편법으로 인트 스트링 자리 바꿈은 가능
 	*/
+	
+	//모든 필드 초기화하는 생성자
+	Dog(String name, int age, int fullrate){
+		this(name, age);
+		//다른 생성자는 하나만 호출 가능
+		this.full = full;
 	
 	
 }
