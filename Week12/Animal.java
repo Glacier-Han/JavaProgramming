@@ -10,6 +10,7 @@
 	 - eat(), speak(),  study()
 	 //각 클래스에서 디폴트 생성자 작성: 나는 ***입니다. 
 */
+
 class Animal {
 	private int age;
 	void eat(){
@@ -28,8 +29,9 @@ class Animal {
 		return age;		
 	}
 }
+
 class Person extends Animal{
-	private String  name;
+	private String name;
 	
 	String getName(){
 		return name;		
@@ -48,6 +50,7 @@ class Person extends Animal{
 		return super.toString()+String.format(", 이름: %s", name);
 	}
 }
+
 class Student extends Person{
 	private int grade;
 	void study(){
