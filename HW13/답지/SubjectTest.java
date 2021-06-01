@@ -16,25 +16,25 @@ class Subject{
 	}
 }
 class Korean extends Subject{
-	Korean(){}	
+	Korean(){}
 	Korean(int score){
 		super(score);
 	}
 }
 class English extends Subject{
-	English(){}	
+	English(){}
 	English(int score){
 		super(score);
 	}
 }
 class Mathematics extends Subject{
-	Mathematics(){}	
+	Mathematics(){}
 	Mathematics(int score){
 		super(score);
-	}	
+	}
 }
 class Science extends Subject{
-	Science(){}	
+	Science(){}
 	Science(int score){
 		super(score);
 	}
@@ -44,7 +44,7 @@ class SubjectTest{
 	public static void main(String [] args){
 		Subject [] subjects = {new Korean(100), new English(72), new Mathematics(), new Science()};
 		Student hong = new Student();
-		
+
 		for(int i=0; i<subjects.length; i++){
 			hong.report(subjects[i]);
 		}
