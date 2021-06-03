@@ -21,6 +21,12 @@ class Car extends Ride{
     this.wheels = wheels;
     this.maker = maker;
   }
+  
+  @Override
+  protected void print(int miles){
+	  super.print(miles);
+	  System.out.println("이 차량은 " + wheels + "개의 바퀴를 가진 " + maker + "의 차량입니다.");
+  }
 }
 
 class Bike extends Ride{
@@ -58,21 +64,26 @@ class Stone{}
 
 class ParkTest{
   public static void main(String [] args){
-    Car c1 = new Car();
+    
+	/*
+	Car c1 = new Car();
 	Car c2 = new Car();
 	Car c3 = new Car();
     Bike b1 = new Bike();
 	Stone s1 = new Stone();
-	Garage g1 = new Garage();
-    c1.print(30);
-    c1.print(60);
-    b1.print(20);
+	*/
 	
-	g1.park(c1);
-	g1.park(c2);
-	g1.park(c3);
-	g1.park(b1);	
+	Garage g1 = new Garage();
+	Ride [] rides = {new Car(), new Car(3, "비엠더블유"), new Car(6, "기아자동차"), new Bike()};
+    Stone s1 = new Stone();
+	
+	rides[0].print(30);
+    rides[0].print(60);
+    rides[3].print(20);
+	rides[2].print(50);
+	
+	for(Ride rs : rides) g1.park(rs);
 	g1.park(s1);
-
+	
   }
 }
