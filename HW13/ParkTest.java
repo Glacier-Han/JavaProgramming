@@ -35,16 +35,44 @@ class Bike extends Ride{
 
 class Garage{
   protected int parked;
+  
+  void park(Object o){
+	  if(o instanceof Car){
+		  parked++;
+		  System.out.println(o.getClass().getName() + "를 차고에 주차했습니다(총 " + parked + "대 주차됨)");
+	  }
+	  else if(o instanceof Bike){
+		  parked++;
+		  System.out.println(o.getClass().getName() + "를 차고에 주차했습니다(총 " + parked + "대 주차됨)");
+	  }
+	  else{
+		  System.out.println("이걸 주차한다고? 다시생각해봐 멍청아");
+	  }
+	  
+	  
+	  
+	}
 }
+
+class Stone{}
 
 class ParkTest{
   public static void main(String [] args){
     Car c1 = new Car();
+	Car c2 = new Car();
+	Car c3 = new Car();
     Bike b1 = new Bike();
+	Stone s1 = new Stone();
+	Garage g1 = new Garage();
     c1.print(30);
     c1.print(60);
     b1.print(20);
-
+	
+	g1.park(c1);
+	g1.park(c2);
+	g1.park(c3);
+	g1.park(b1);	
+	g1.park(s1);
 
   }
 }
