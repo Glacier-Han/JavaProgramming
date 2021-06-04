@@ -53,8 +53,11 @@ import java.util.*;
 		  }
 		  
 		  pw1.close();
+		  s1.close();
 		  System.out.println("평균 작성 완료.");
 		  
+		  //오름차순 내림차순 정렬 연습!
+		
 		  
 		  
 	  }
