@@ -2,6 +2,10 @@
 //ReservationTest 클래스 에서 반드시 Theater 클래스의 객체 생성 후 이 객체를 통해 테스트진행.
 //이외 세부조건 없음.
 
+//2018111316 전자공학부A 한병하 미니프로젝트 과제입니다.
+//1번 문제를 택하여 풀이하였습니다.
+//한 학기동안 수고하셨습니다 :)
+
 import java.util.*;
 
 class ReservationTest{
@@ -16,8 +20,8 @@ class ReservationTest{
         theater.showMe();
 
         while(true){
-          System.out.println(">-- 현재 좌석 내역입니다 --<");
-          System.out.print(">-- 예약하시겠습니까?(Y,y / N,n) --< ");
+          
+          System.out.print(">-- 예약하시겠습니까?(Y,y / N,n) : ");
           char yesorno = sc.next().charAt(0);
           if(yesorno == 'Y' || yesorno == 'y'){
             reserv.startReserve();
@@ -67,7 +71,7 @@ class Theater{
   
 
   void chairSetup(){
-
+	  
     for(int i=0; i<10; i++){
       for(int j=0; j<10; j++){
         Random ran = new Random();
@@ -84,7 +88,8 @@ class Theater{
   
 
   void showMe(){
-
+	  
+	System.out.println(">-- 현재 좌석 내역입니다 --<");
     //가로 기본번호 생성
     System.out.print("  ");
     for(int i=1; i<=10; i++){
@@ -110,7 +115,7 @@ class Reservation extends Theater{
 
   void startReserve(){
 
-      System.out.print(">-- 몇번째 행을 예약하시겠습니까? (ex : e) --< ");
+      System.out.print(">-- 몇번째 행을 예약하시겠습니까? (ex : e) : ");
 
       char hangtmp = sc.next().charAt(0);
       int hang;
@@ -132,19 +137,19 @@ class Reservation extends Theater{
 
       }
 
-      System.out.print(">-- 몇번째 열을 예약하시겠습니까? --< ");
+      System.out.print(">-- 몇번째 열을 예약하시겠습니까? (ex : 1) : ");
       int yeol = sc.nextInt() - 1;
-      if(yeol < 0 || yeol > 10){
+      if(yeol < 0 || yeol > 9){
         System.out.println("!!-- 1~10 사이의 값을 입력해주세요 --!!");
         return;
       }
 
 
     if(getChair(hang, yeol) == ' ') {
-      System.out.println("\n>-- 현재 " + (hangtmp) +"행"+(yeol+1)+"열 좌석은 예약 가능합니다.\n>-- 예약을 진행하겠습니다 --<");
+      System.out.println("\n>-- 현재 " + (hangtmp) +"행"+(yeol+1)+"열 좌석은 예약 가능합니다 --<\n>-- 예약을 진행하겠습니다 --<");
     }
     else if(getChair(hang, yeol) == 'X'){
-      System.out.println("\n>-- 현재 " + (hangtmp) +"행"+(yeol+1)+"열 좌석은 이미 예약되어 있습니다.\n다른 좌석을 선택해 주세요 --<");
+      System.out.println("\n>-- 현재 " + (hangtmp) +"행"+(yeol+1)+"열 좌석은 이미 예약되어 있습니다. --<\n>-- 다른 좌석을 선택해 주세요 --<");
       return;
     }
     else {
