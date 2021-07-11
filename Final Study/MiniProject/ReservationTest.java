@@ -114,7 +114,7 @@ class Reservation extends Theater{
   Scanner sc = new Scanner(System.in);
 
   void startReserve(){
-
+	 
       System.out.print(">-- 몇번째 행을 예약하시겠습니까? (ex : e) : ");
 
       char hangtmp = sc.next().charAt(0);
@@ -133,8 +133,6 @@ class Reservation extends Theater{
       else {
         System.out.println("!!-- a ~ j 사이의 행을 입력해주세요 --!!");
         return;
-
-
       }
 
       System.out.print(">-- 몇번째 열을 예약하시겠습니까? (ex : 1) : ");
@@ -143,20 +141,21 @@ class Reservation extends Theater{
         System.out.println("!!-- 1~10 사이의 값을 입력해주세요 --!!");
         return;
       }
-
-
-    if(getChair(hang, yeol) == ' ') {
-      System.out.println("\n>-- 현재 " + (hangtmp) +"행"+(yeol+1)+"열 좌석은 예약 가능합니다 --<\n>-- 예약을 진행하겠습니다 --<");
-    }
-    else if(getChair(hang, yeol) == 'X'){
-      System.out.println("\n>-- 현재 " + (hangtmp) +"행"+(yeol+1)+"열 좌석은 이미 예약되어 있습니다. --<\n>-- 다른 좌석을 선택해 주세요 --<");
-      return;
-    }
-    else {
-      System.out.println("!!-- 시스템 오류 --!!");
-      System.out.println(getChair(hang, yeol));
-      System.exit(9);
-    }
+	
+	if(getChair(hang, yeol) == ' ') {
+	  System.out.println("\n>-- 현재 " + (hangtmp) +"행"+(yeol+1)+"열 좌석은 예약 가능합니다 --<\n>-- 예약을 진행하겠습니다 --<");
+	}
+	else if(getChair(hang, yeol) == 'X'){
+	  System.out.println("\n>-- 현재 " + (hangtmp) +"행"+(yeol+1)+"열 좌석은 이미 예약되어 있습니다. --<\n>-- 다른 좌석을 선택해 주세요 --<");
+	  startReserve();
+	  return;
+	}
+	else {
+	  System.out.println("!!-- 시스템 오류 --!!");
+	  System.out.println(getChair(hang, yeol));
+	  System.exit(9);
+	}
+	
 
     super.setChair(hang,yeol,'X');
     System.out.println("\n!!-- " + (hangtmp) +"행"+(yeol+1)+"열 좌석 예약 완료되었습니다 --!!");
