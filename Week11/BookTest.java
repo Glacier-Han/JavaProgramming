@@ -1,18 +1,18 @@
-import java.util.*;
+ï»¿import java.util.*;
 
 class Book{
 	private String title;
 	private String author;
 	private int pages;
 	private int price;
-	static int count; //static ºÙÀ¸¸é ¸ğµç Å¬·¡½º°¡ °øÀ¯ÇÏ´Â ÇÊµå°¡ µÊ.
+	static int count; //static ë¶™ìœ¼ë©´ ëª¨ë“  í´ë˜ìŠ¤ê°€ ê³µìœ í•˜ëŠ” í•„ë“œê°€ ë¨.
 	
 	int getCount(){
 		return count;
 	}
 	
 	Book(){
-		this("¾È³ç","ÇÑ»ù",120,11000);
+		this("ì•ˆë…•","í•œìƒ˜",120,11000);
 	}
 	
 	Book(String title, int price){
@@ -29,13 +29,13 @@ class Book{
 	}
 	
 	public String toString(){
-		return String.format("Á¦¸ñ : %s / ÀúÀÚ : %s / ÃÑ %03dÆäÀÌÁö / Á¤°¡ : %d¿ø",title, author, pages, price);
+		return String.format("ì œëª© : %s / ì €ì : %s / ì´ %03dí˜ì´ì§€ / ì •ê°€ : %dì›",title, author, pages, price);
 	}
 	
 	/*
 	static void speak(){
-		//static ¸Ş¼Òµå´Â ¸ğµç °´Ã¼°¡ µ¿ÀÏÇÑ °á°ú¸¦ ³»¾ßÇÑ´Ù
-		//±×·¡¼­ non-static (ÀÎ½ºÅÏ½º) ¸â¹ö´Â »ç¿ë ºÒ°¡ÇÔ
+		//static ë©”ì†Œë“œëŠ” ëª¨ë“  ê°ì²´ê°€ ë™ì¼í•œ ê²°ê³¼ë¥¼ ë‚´ì•¼í•œë‹¤
+		//ê·¸ë˜ì„œ non-static (ì¸ìŠ¤í„´ìŠ¤) ë©¤ë²„ëŠ” ì‚¬ìš© ë¶ˆê°€í•¨
 	}
 	*/
 	
@@ -44,9 +44,9 @@ class Book{
 class BookTest{
 	public static void main(String [] args){
 		Book book = new Book();
-		Book book1 = new Book("¼öÇĞÀÇ Á¤¼®",23000);
-		Book book2 = new Book("ÇØÄ¿½º ÅäÀÍ", "YBM", 580, 18000);
-		Book book3 = new Book("Power JAVA", "ÃµÀÎ±¹", 180, 17000);
+		Book book1 = new Book("ìˆ˜í•™ì˜ ì •ì„",23000);
+		Book book2 = new Book("í•´ì»¤ìŠ¤ í† ìµ", "YBM", 580, 18000);
+		Book book3 = new Book("Power JAVA", "ì²œì¸êµ­", 180, 17000);
 		
 		System.out.println(book.toString());
 		System.out.println(book1.toString());
